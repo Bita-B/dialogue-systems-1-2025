@@ -1,0 +1,36 @@
+
+<!-- Reference: Original poem by Rumi
+VG part included: expressive style, prosody, emphasis, optional background audio integation 
+-->
+
+<speak version="1.0"
+       xmlns="http://www.w3.org/2001/10/synthesis"
+       xmlns:mstts="http://www.w3.org/2001/mstts"
+       xml:lang="en-US">
+
+  <voice name="en-US-JennyNeural">
+    <mstts:express-as style="calm" styledegree="1.4">
+
+      <prosody rate="slow" pitch="+4%">
+
+        Love is the water of life.
+        <break time="900ms"/>
+
+        Everything other than love for the most beautiful God,
+        <break time="1000ms"/>
+
+        What is agony of the spirit?
+        <break time="1100ms"/>
+
+        to advance toward death without seizing
+        <break time="600ms"/>
+
+        hold of the water of life.
+        <break time="1000ms"/>
+
+      </prosody>
+
+    </mstts:express-as>
+  </voice>
+
+</speak>        
