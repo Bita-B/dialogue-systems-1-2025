@@ -1,0 +1,222 @@
+{
+    "projectFileVersion": "2025-05-15-preview",
+    "stringIndexType": "Utf16CodeUnit",
+    "metadata": {
+        "projectKind": "Conversation",
+        "settings": {
+            "confidenceThreshold": 0,
+            "normalizeCasing": false,
+            "augmentDiacritics": false
+        },
+        "projectName": "appointment",
+        "multilingual": false,
+        "description": "",
+        "language": "en-us"
+    },
+    "assets": {
+        "projectKind": "Conversation",
+        "intents": [
+            {
+                "category": "None",
+                "description": "Used when the user's input doesn't match any known intent or is out of scope."
+            },
+            {
+                "category": "CreateMeeting"
+            },
+            {
+                "category": "WhoIs"
+            }
+        ],
+        "entities": [
+            {
+                "category": "meetingPerson",
+                "compositionSetting": "combineComponents"
+            },
+            {
+                "category": "meetingDate",
+                "compositionSetting": "combineComponents"
+            },
+            {
+                "category": "meetingTime",
+                "compositionSetting": "combineComponents"
+            },
+            {
+                "category": "person",
+                "compositionSetting": "combineComponents"
+            }
+        ],
+        "utterances": [
+            {
+                "text": "Who is Reza Pahlavi?",
+                "language": "en-us",
+                "intent": "WhoIs",
+                "entities": [
+                    {
+                        "category": "person",
+                        "offset": 7,
+                        "length": 12
+                    }
+                ],
+                "dataset": "Train"
+            },
+            {
+                "text": "Who is Steve Jobs?",
+                "language": "en-us",
+                "intent": "WhoIs",
+                "entities": [
+                    {
+                        "category": "person",
+                        "offset": 7,
+                        "length": 10
+                    }
+                ],
+                "dataset": "Train"
+            },
+            {
+                "text": "Do you know who Emma Watson is?",
+                "language": "en-us",
+                "intent": "WhoIs",
+                "entities": [
+                    {
+                        "category": "person",
+                        "offset": 16,
+                        "length": 11
+                    }
+                ],
+                "dataset": "Train"
+            },
+            {
+                "text": "Who is Vlad Maraev? ",
+                "language": "en-us",
+                "intent": "WhoIs",
+                "entities": [
+                    {
+                        "category": "person",
+                        "offset": 7,
+                        "length": 11
+                    }
+                ],
+                "dataset": "Train"
+            },
+            {
+                "text": "Who is John Doe?",
+                "language": "en-us",
+                "intent": "WhoIs",
+                "entities": [
+                    {
+                        "category": "person",
+                        "offset": 7,
+                        "length": 8
+                    }
+                ],
+                "dataset": "Train"
+            },
+            {
+                "text": "Who is Donald Trump?",
+                "language": "en-us",
+                "intent": "WhoIs",
+                "entities": [
+                    {
+                        "category": "person",
+                        "offset": 7,
+                        "length": 12
+                    }
+                ],
+                "dataset": "Train"
+            },
+            {
+                "text": "Set up a meeting with Vlad Maraev.",
+                "language": "en-us",
+                "intent": "CreateMeeting",
+                "entities": [
+                    {
+                        "category": "meetingPerson",
+                        "offset": 22,
+                        "length": 11
+                    }
+                ],
+                "dataset": "Train"
+            },
+            {
+                "text": "Book a meeting for Monday with Emma Watson.",
+                "language": "en-us",
+                "intent": "CreateMeeting",
+                "entities": [
+                    {
+                        "category": "meetingDate",
+                        "offset": 19,
+                        "length": 6
+                    },
+                    {
+                        "category": "meetingPerson",
+                        "offset": 31,
+                        "length": 11
+                    }
+                ],
+                "dataset": "Train"
+            },
+            {
+                "text": "Arrange a meeting with David Brown at 9",
+                "language": "en-us",
+                "intent": "CreateMeeting",
+                "entities": [
+                    {
+                        "category": "meetingPerson",
+                        "offset": 23,
+                        "length": 11
+                    },
+                    {
+                        "category": "meetingTime",
+                        "offset": 35,
+                        "length": 4
+                    }
+                ],
+                "dataset": "Train"
+            },
+            {
+                "text": "Set up a meeting with Donald Trump.",
+                "language": "en-us",
+                "intent": "CreateMeeting",
+                "entities": [
+                    {
+                        "category": "meetingPerson",
+                        "offset": 22,
+                        "length": 12
+                    }
+                ],
+                "dataset": "Train"
+            },
+            {
+                "text": "I need a meeting at 10.",
+                "language": "en-us",
+                "intent": "CreateMeeting",
+                "entities": [
+                    {
+                        "category": "meetingTime",
+                        "offset": 20,
+                        "length": 2
+                    }
+                ],
+                "dataset": "Train"
+            },
+            {
+                "text": "Schedule a meeting with Emma at 9.",
+                "language": "en-us",
+                "intent": "CreateMeeting",
+                "entities": [
+                    {
+                        "category": "meetingPerson",
+                        "offset": 24,
+                        "length": 4
+                    },
+                    {
+                        "category": "meetingTime",
+                        "offset": 32,
+                        "length": 1
+                    }
+                ],
+                "dataset": "Train"
+            }
+        ]
+    }
+}
