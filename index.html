@@ -1,12 +1,43 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>ASR Test</title>
+  <meta charset="UTF-8">
+  <title>ASR Test</title>
 </head>
 <body>
-    <h1>ASR Test</h1>
-    <script src="dm.js"></script>
+  <button id="start">Start Test</button>
+  <script>
+    const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+    if (!SpeechRecognition) {
+      alert("Your browser does not support SpeechRecognition!");
+    } else {
+      const recognition = new SpeechRecognition();
+      recognition.lang = "en-US";
+      recognition.interimResults = false;
+
+      const names = [
+        "Westeros", "Freshteh", "Parvaneh",
+      ];
+
+      recognition.onresult = (event) => {
+        const transcript = event.results[0][0].transcript;
+        const confidence = event.results[0][0].confidence;
+        console.log("Transcript:", transcript);
+        console.log("Confidence:", confidence);
+      };
+
+      recognition.onerror = (event) => {
+        console.error("Error:", event.error);
+      };
+
+      recognition.onend = () => {
+        console.log("Recognition ended. You can click the button to try again.");
+      };
+
+      document.getElementById("start").addEventListener("click", () => {
+        recognition.start();
+      });
+    }
+  </script>
 </body>
 </html>
